@@ -31,15 +31,17 @@ const recipes = (recipes) => {
 		(recipe) => `<div id="card_container">
 
 									<div id="recipe_descr">
-										<div>
+										<div class="recipe_image">
 											<img src=${recipe.recipe.image} alt="">
 										</div>
 										<div id="description">
 											<h3>${recipe.recipe.label}</h3>
-											<p>Cuisine type: ${recipe.recipe.cuisineType}</p>
-											<p>Diet Type: ${recipe.recipe.dietLabels}</p>
-											<p>Meal Type: ${recipe.recipe.mealType}</p>
-											<button><a href=${recipe.recipe.url} target="_blank">View Recipe</a></button>
+											<div class="description_detail">
+											<p><span>Cuisine type:</span> ${recipe.recipe.cuisineType}</p>
+											<p><span>Diet Type: </span>${recipe.recipe.dietLabels}</p>
+											<p><span>Meal Type: </span>${recipe.recipe.mealType}</p>
+											</div>
+											<button class="description_button"><a href=${recipe.recipe.url} target="_blank">View Recipe</a></button>
 										</div>
 									</div>
 									<div id="recipe_info">

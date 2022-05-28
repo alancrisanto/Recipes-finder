@@ -122,10 +122,13 @@ header img {
 
 #search {
 	font-family: "Exo 2", sans-serif;
+	font-size: 25px;
 	flex-grow: 2;
-	padding: 0.5rem;
+	padding: 1rem;
+	margin-top: 1rem;
 	width: 80%;
-	border: none;
+	border-color: #557ab9;
+	/* border: none; */
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
@@ -142,7 +145,10 @@ header img {
 
 #search_botton {
 	padding: 0.5rem;
-	border: none;
+	margin-top: 1rem;
+	background-color: #3b5178;
+	color: white;
+	/* border: none; */
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
@@ -194,4 +200,37 @@ td {
 #servings_info p:last-child {
 	font-size: 20px;
 	color: #557ab9;
+}
+
+.recipe_image {
+	max-width: 200px;
+	height: 160px;
+	overflow: hidden;
+}
+
+#description p,
+span {
+	font-family: "Exo 2", sans-serif;
+	font-size: 15px;
+}
+
+/* #description span {
+	font-weight: 800;
+} */
+
+.description_detail {
+	margin-top: 0.8rem;
+}
+
+.description_button {
+	margin-top: 0.8rem;
+	background-color: #3b5178;
+	border-radius: 10px;
+	padding: 0.5rem;
+	align-self: bottom;
+}
+
+.description_button a {
+	text-decoration: none;
+	color: #eee;
 }
