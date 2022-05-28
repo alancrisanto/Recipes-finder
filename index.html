@@ -19,13 +19,13 @@
 			<img src="assets/images/Logo1.png" alt="logo" />
 			<nav>
 				<ul>
-					<li>Home</li>
-					<li>Details</li>
-					<li>Contact</li>
+					<li><a href="#home">Home</a> </li>
+					<li><a href="#recipes">Details</a> </li>
+					<li><a href="#contact">Contact</a> </li>
 				</ul>
 			</nav>
 		</header>
-		<section class="home">
+		<section class="home" id="home">
 			<div id="page_content" class="page_content">
 				<h3>Get Out of the routine</h3>
 				<p><span>All Recipes  </span> inspires your menus, get ideas and keep cooking without limitations</p>
@@ -36,6 +36,22 @@
 				</div>
 			</div>
 		</section>
+		<section id="sorting">
+				<div>
+					<p>Sort By Recipes</p>
+					<select id="sortByRecipe">
+						<option value="ascending">Recipes A-Z</option>
+						<option value="descending">Recipes Z-A</option>
+					</select>
+				</div>
+				<div>
+					<p>Sort By Calories</p>
+					<select id="sortByCalories">
+						<option value="caloriesAscending">High Calories</option>
+						<option value="caloriesDescending">Low Calories</option>
+					</select>
+				</div>
+			</section>
 		<section id="recipes">
 			<!-- <div id="card_container">
 				<div id="recipe_descr">
@@ -87,6 +103,11 @@
 				</div>
 			</div> -->
 		</section>
+		<footer id="contact">
+			<p>&copy Created by Alan Crisanto</p>
+			<p>|</p>
+			<p id="year"></p>
+		</footer>
 
 		<script src="scripts/main.js"></script>
 	</body>
