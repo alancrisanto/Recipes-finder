@@ -49,7 +49,7 @@ header img {
 }
 
 .home {
-	border: 1px solid rgb(159, 34, 9);
+	/* border: 1px solid rgb(159, 34, 9); */
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -108,7 +108,7 @@ header img {
 	font-family: "Exo 2", sans-serif;
 	font-size: 2.5rem;
 	padding: 2.5rem 0;
-	color: #ce3d6f;
+	color: #557ab9;
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
 		0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
 		0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
@@ -156,12 +156,12 @@ header img {
 #recipes {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
-	margin: 3rem;
+	gap: 1.5rem;
+	margin: 3rem 2rem;
 }
 
 #card_container {
-	width: 28rem;
+	width: 29rem;
 	border: 1px solid #eee;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -204,19 +204,25 @@ td {
 
 .recipe_image {
 	max-width: 200px;
-	height: 160px;
+	height: 180px;
 	overflow: hidden;
 }
 
-#description p,
-span {
+#description p {
 	font-family: "Exo 2", sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 }
 
-/* #description span {
+#description h3 {
+	font-size: 24px;
+}
+
+#description span {
+	font-family: "Exo 2", sans-serif;
+	font-size: 18px;
 	font-weight: 800;
-} */
+	color: RGB(250, 119, 134);
+}
 
 .description_detail {
 	margin-top: 0.8rem;
@@ -232,5 +238,6 @@ span {
 
 .description_button a {
 	text-decoration: none;
+	font-size: 18px;
 	color: #eee;
 }

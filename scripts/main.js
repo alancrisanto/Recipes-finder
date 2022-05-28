@@ -37,9 +37,9 @@ const recipes = (recipes) => {
 										<div id="description">
 											<h3>${recipe.recipe.label}</h3>
 											<div class="description_detail">
-											<p><span>Cuisine type:</span> ${recipe.recipe.cuisineType}</p>
-											<p><span>Diet Type: </span>${recipe.recipe.dietLabels}</p>
-											<p><span>Meal Type: </span>${recipe.recipe.mealType}</p>
+											<p><span>Cuisine type: </span> ${recipe.recipe.cuisineType}</p>
+											<p><span>Diet Type: </span> ${recipe.recipe.dietLabels}</p>
+											<p><span>Meal Type: </span> ${recipe.recipe.mealType}</p>
 											</div>
 											<button class="description_button"><a href=${recipe.recipe.url} target="_blank">View Recipe</a></button>
 										</div>
