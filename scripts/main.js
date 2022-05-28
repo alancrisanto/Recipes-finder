@@ -92,14 +92,20 @@ const displayRecipes = (recipes) => {
 	recipesSection.classList.remove("not_found");
 };
 
+// ********** Display meessage if array is empty ************
+
 const noRecipes = () => {
 	recipesSection.innerHTML = `<p>Sorry, we didn't find any recipes</p>`;
 	recipesSection.classList.add("not_found");
 };
 
+// ********** set recipes section empty ***********
+
 const reset = () => {
 	recipesSection.innerHTML = "";
 };
+
+// ********** Sorting functions ***********
 
 const sortByRecipe = () => {
 	reset();
