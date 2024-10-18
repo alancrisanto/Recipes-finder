@@ -1,114 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;0,600;1,400&family=Lobster&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Project CSE 121B</title>
-		<link rel="stylesheet" href="styles/styles.css" />
-	</head>
-	<body>
-		<header>
-			<img src="assets/images/logo-3.png" alt="logo" />
-			<nav>
-				<ul>
-					<li><a href="#home">Home</a> </li>
-					<li><a href="#recipes">Details</a> </li>
-					<li><a href="#contact">Contact</a> </li>
-				</ul>
-			</nav>
-		</header>
-		<section class="home" id="home">
-			<div id="page_content" class="page_content">
-				<h3>Get Out of the routine</h3>
-				<p><span>All Recipes  </span> inspires your menus, get ideas and keep cooking without limitations</p>
-				<div id="search_form">
-					<!-- <label for="search" id="search_label">Search menu ideas</label><br /> -->
-					<input type="text" id="search" name="search" placeholder="search by ingredients..." />
-					<button type="submit" id="search_botton" /><i class="fa-solid fa-magnifying-glass"></i></button>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;0,600;1,400&family=Lobster&display=swap"
+		rel="stylesheet" />
+	<title>Project CSE 121B</title>
+	<link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+	<header>
+		<img src="assets/images/logo-3.png" alt="logo" />
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a> </li>
+				<li><a href="#recipes">Details</a> </li>
+				<li><a href="#contact">Contact</a> </li>
+			</ul>
+		</nav>
+	</header>
+	<section class="home" id="home">
+		<div id="page_content" class="page_content">
+			<h3>Get Out of the routine</h3>
+			<p><span>All Recipes </span> inspires your menus, get ideas and keep cooking without limitations</p>
+			<div id="search_form">
+				<!-- <label for="search" id="search_label">Search menu ideas</label><br /> -->
+				<input type="text" id="search" name="search" placeholder="search by ingredients..." />
+				<button type="submit" id="search_botton"><i class="fa-solid fa-magnifying-glass"></i></button>
+			</div>
+		</div>
+	</section>
+	<section id="sorting">
+		<div>
+			<p>Sort By Recipes</p>
+			<select id="sortByRecipe">
+				<option value="ascending">Recipes A-Z</option>
+				<option value="descending">Recipes Z-A</option>
+			</select>
+		</div>
+		<div>
+			<p>Sort By Calories</p>
+			<select id="sortByCalories">
+				<option value="caloriesAscending">High Calories</option>
+				<option value="caloriesDescending">Low Calories</option>
+			</select>
+		</div>
+	</section>
+	<section id="recipes">
+		<div class="card_container">
+			<img src="/assets/images/bread.png" alt="bread image">
+			<div class="info">
+				<p>8 Servings</p>
+				<p>272 Kcal</p>
+			</div>
+			<div class="card-body">
+				<div class="title">
+					<h3>Lorem ipsum dolor sit amet.</h3>
+				</div>
+				<div class="info-detail">
+					<p>south american</p>
+					<p>lunch/dinner</p>
+					<p>Low-Fat</p>
+				</div>
+				<div class="nutrition-info">
+					<div class="nutrition" style="display: flex; gap: 1rem;">
+						<p>Protein: 12g</p>
+						<p>Cholesterol: 12g</p>
+					</div>
+					<div class="nutrition" style="display: flex; gap: 1rem;">
+						<p>Fat: 12g</p>
+						<p>Sodium: 12g</p>
+					</div>
+					<div class="nutrition" style="display: flex; gap: 1rem;">
+						<p>Carb: 12g</p>
+						<p>Calcium: 12g</p>
+					</div>
+				</div>
+				<div>
+					<a href="#">View Recipe</a>
 				</div>
 			</div>
-		</section>
-		<section id="sorting">
-				<div>
-					<p>Sort By Recipes</p>
-					<select id="sortByRecipe">
-						<option value="ascending">Recipes A-Z</option>
-						<option value="descending">Recipes Z-A</option>
-					</select>
-				</div>
-				<div>
-					<p>Sort By Calories</p>
-					<select id="sortByCalories">
-						<option value="caloriesAscending">High Calories</option>
-						<option value="caloriesDescending">Low Calories</option>
-					</select>
-				</div>
-			</section>
-		<section id="recipes">
-			<!-- <div id="card_container">
-				<div id="recipe_descr">
-					<div>
-						<img src="/assets/images/bread.png" alt="">
-					</div>
-					<div id="description">
-						<h3>Lorem ipsum dolor sit amet.</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex commodi dolor hic corrupti tempora illum.</p>
-					</div>
-				</div>
-				<div id="recipe_info">
-					<div>
-						<p>8 Servings</p>
-						<p>272 Kcal</p>
-					</div>
-					<div>
-						<table id="nutrients_info">
-							<tr>
-								<td>🟢 Protein</td>
-								<td>69 g</td>
-							</tr>
-							<tr>
-								<td>🟡 Fat</td>
-								<td>23 g</td>
-							</tr>
-							<tr>
-								<td>🔴 Carb</td>
-								<td>412 g</td>
-							</tr>
-						</table>
-					</div>
-					<div>
-						<table id="nutrients_detail">
-							<tr>
-								<td>Cholesterol</td>
-								<td>0 mg</td>
-							</tr>
-							<tr>
-								<td>Sodium</td>
-								<td>285 mg</td>
-							</tr>
-							<tr>
-								<td>Calcium</td>
-								<td>12 mg</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div> -->
-		</section>
-		<footer id="contact">
-			<p>&copy Created by Alan Crisanto</p>
-			<p>|</p>
-			<p id="year"></p>
-		</footer>
+		</div>
+	</section>
+	<footer id="contact">
+		<p>&copy Created by Alan Crisanto</p>
+		<p>|</p>
+		<p id="year"></p>
+	</footer>
 
-		<script src="scripts/main.js"></script>
-	</body>
+	<script src="scripts/main.js"></script>
+</body>
+
 </html>

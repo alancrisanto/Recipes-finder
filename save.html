@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a1afb6ef68.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/styles.css" type="text/css">
+  <link rel="stylesheet" href="../css/food.css" type="text/css">
+  <title>Paw Paw Adopt!</title>
+</head>
+<body>
+<div class="background"></div>
+<nav class="navigation">
+  <div class="logo"><i class="fa-solid fa-paw fa-3x"></i></div>
+  <nav class="menu">
+    <ul class="menuItems">
+      <li><a href="../index.html" data-item="Home">Home</a></li>
+      <li><a href="../form.html" data-item="Form">Form</a></li>
+      <li><a href="../pages/donate.html" data-item="Donate">Donate</a></li>
+    </ul>
+  </nav>
+</nav>
+<main>
+  <section class="home" id="home">
+    <div id="page_content" class="page_content">
+      <h3 class="content_title">Get food ideas for your new friend</h3>
+      <div id="search_form">
+        <!-- <label for="search" id="search_label">Search menu ideas</label><br /> -->
+        <input type="text" id="search" name="search" placeholder="search by ingredients..." />
+        <button type="submit" id="search_botton" /><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </section>
+  <section id="sorting">
+      <div>
+        <p>Sort By Recipes</p>
+        <select id="sortByRecipe">
+          <option value="ascending">Recipes A-Z</option>
+          <option value="descending">Recipes Z-A</option>
+        </select>
+      </div>
+      <div>
+        <p>Sort By Calories</p>
+        <select id="sortByCalories">
+          <option value="caloriesAscending">High Calories</option>
+          <option value="caloriesDescending">Low Calories</option>
+        </select>
+      </div>
+    </section>
+  <section id="recipes">
+    <!-- Content -->
+  </section>
+</main>
+<footer id="contact" class="footer">
+  <div class="container-footer">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../js/food.js" type="module"></script>
+</body>
+</html>

@@ -20,6 +20,7 @@ const getData = async () => {
 	);
 
 	let data = await response.json();
+	console.log(data);
 	recipesList = data.hits;
 	console.log(recipesList);
 
