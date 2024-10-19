@@ -39,55 +39,54 @@ searchButton.addEventListener("click", getData);
 
 // if (recipesList.length > 0) {
 const displayRecipes = (recipes) => {
-	const recipesHtml = recipes.map(
-		(recipe) => `
-											<div id="card_container">
+	const recipesHtml = recipes.map((recipe) => {
+		// Verificar si cada campo tiene información y renderizar solo si existe
+		const cuisineType = recipe.recipe.cuisineType ? `<p>${recipe.recipe.cuisineType}</p>` : "";
+		const dietLabels = recipe.recipe.dietLabels.length > 0 ? `<p>${recipe.recipe.dietLabels.join(", ")}</p>` : "";
+		const mealType = recipe.recipe.mealType ? `<p>${recipe.recipe.mealType}</p>` : "";
 
-										<div id="recipe_descr">
-											<div class="recipe_image">
-												<img src=${recipe.recipe.image} alt="">
-											</div>
-											<div id="description">
-												<h3>${recipe.recipe.label}</h3>
-												<div class="description_detail">
-												<p><span>Cuisine type: </span> ${recipe.recipe.cuisineType}</p>
-												<p><span>Diet Type: </span> ${recipe.recipe.dietLabels}</p>
-												<p><span>Meal Type: </span> ${recipe.recipe.mealType}</p>
-												</div>
-												<button class="description_button"><a href=${recipe.recipe.url} target="_blank">View Recipe</a></button>
-											</div>
-										</div>
-										<div id="recipe_info">
-
-											<div id="servings_info">
-												<p>${recipe.recipe.yield} Servings</p>
-												<p> ${recipe.recipe.calories.toFixed(2)} cal</p>
-											</div>
-											<div>
-												<table id="nutrients_info">
-													<tr>
-														<td>🟢 Protein</td>
-														<td>${recipe.recipe.digest[2].total.toFixed(0)} g</td>
-														<td>Cholesterol</td>
-														<td>${recipe.recipe.digest[3].total.toFixed(0)} mg</td>
-													</tr>
-													<tr>
-														<td>🟡 Fat</td>
-														<td>${recipe.recipe.digest[0].total.toFixed(0)} g</td>
-														<td>Sodium</td>
-														<td>${recipe.recipe.digest[4].total.toFixed(0)} mg</td>
-													</tr>
-													<tr>
-														<td>🔴 Carb</td>
-														<td>${recipe.recipe.digest[1].total.toFixed(0)} g</td>
-														<td>Calcium</td>
-														<td>${recipe.recipe.digest[5].total.toFixed(0)} mg</td>
-													</tr>
-												</table>
-											</div>
-										</div>
-									</div>`,
-	);
+		// Continuar con la construcción del HTML
+		return `
+				<div class="card_container">
+					<img src="${recipe.recipe.image}" alt="image of ${recipe.recipe.label} recipe">
+					<div class="info">
+						<p>${recipe.recipe.yield} Servings</p>
+						<p>${recipe.recipe.calories.toFixed(2)} Kcal</p>
+					</div>
+					<div class="card-body">
+						<div class="title">
+							<h3>${recipe.recipe.label}</h3>
+							<hr>
+						</div>
+						<div class="info-detail">
+							${cuisineType}
+							${dietLabels}
+							${mealType}
+						</div>
+						<div class="nutrition-info">
+							<div class="nutrition">
+								<p>Protein: ${recipe.recipe.digest[2].total.toFixed(0)}g</p>
+								<p>Cholesterol: ${recipe.recipe.digest[3].total.toFixed(0)} g</p>
+								<p>Fat: ${recipe.recipe.digest[0].total.toFixed(0)}g</p>
+							</div>
+							<div class="nutrition">
+								<p>Sodium: ${recipe.recipe.digest[4].total.toFixed(0)} g</p>
+								<p>Calcium: ${recipe.recipe.digest[1].total.toFixed(0)} g</p>
+								<p>Carb: ${recipe.recipe.digest[5].total.toFixed(0)}g</p>
+							</div>
+						</div>
+						<div class="button">
+							<a href="${recipe.recipe.url}" target="_blank" rel="noopener noreferrer">
+								<span class="shadow"></span>
+								<span class="edge"></span>
+								<span class="front text"> View Recipe
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			`;
+	});
 
 	recipesSection.innerHTML = recipesHtml.join("");
 	recipesSection.classList.remove("not_found");
